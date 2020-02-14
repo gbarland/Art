@@ -15,7 +15,7 @@ from random import shuffle, seed
 ################################################################################
 
 # Logic controls
-record = True  # Save every frame?
+record = False  # Save every frame?
 animate = True  # Loop through draw()? 
 seeded = True  # Set random seeds?
 
