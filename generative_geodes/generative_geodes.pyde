@@ -15,7 +15,7 @@ from random import shuffle, seed
 ################################################################################
 
 # Logic controls
-record = True  # Save every frame?
+record = False  # Save every frame?
 animate = True  # Loop through draw()? 
 seeded = True  # Set random seeds?
 
@@ -61,7 +61,7 @@ def setup():
     colorMode(HSB, 360, 100, 100, 100)
         
     # Set the number of frames per second to display
-    frameRate(60)
+    frameRate(6)
     
     # Keeps text centered vertically and horizontally at (x,y) coords
     textMode(CENTER)
@@ -100,7 +100,7 @@ def draw():
     num_points = 200
 
     for i in range(0, 410, 2):
-        offset_blob += 0.02
+        offset_blob += 0.04
         beginShape()
         for x, y in circle_noise_locations(w/2+i-200, h/2, r, r_delta, num_points, offset_frame):
             vertex(x, y)
