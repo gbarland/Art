@@ -95,14 +95,14 @@ def draw():
     
     offset_frame += noise_increment
     
-    r = 60
+    r = 30
     r_delta = 80
     num_points = 200
 
-    for i in range(0, 410, 2):
+    for i in range(0, 410, 1):
         offset_blob += 0.02
         beginShape()
-        for x, y in circle_noise_locations(w/2+i-200, h/2, r, r_delta, num_points, offset_frame):
+        for x, y in circle_noise_locations(w/2, h/2, r, r_delta, num_points, offset_frame):
             vertex(x, y)
         endShape()
         
